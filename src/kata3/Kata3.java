@@ -1,22 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package kata3;
 
-/**
- *
- * @author AntonioAguado
- */
-public class Kata3 {
 
-    /**
-     * @param args the command line arguments
-     */
+import java.util.HashMap;
+
+
+public class Kata3 {
     public static void main(String[] args) {
-        HistogramDisplay histo = new HistogramDisplay();
+        Histogram<String> histogram = new Histogram<String>();
+        histogram.increment("gmail.com");
+        histogram.increment("gmail.com");
+        histogram.increment("gmail.com");
+        histogram.increment("gmail.com");
+        histogram.increment("ulpgc.com");
+        histogram.increment("ulpgc.com");
+        histogram.increment("ulpgc.com");
+        histogram.increment("alu.ulpgc.com");
+        histogram.increment("alu.ulpgc.com");
+        
+        HistogramDisplay histo = new HistogramDisplay(histogram);
         histo.execute();
     }
-    
 }
